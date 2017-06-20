@@ -1,6 +1,6 @@
 Preferred, but not required, skills include:
-•	Experience with Domain-Driven Design (DDD) and Test Driven Development (TDD);
-•	Experience with front-end technologies such as jQuery, SCSS, SVG, HTML5 and Bootstrap;
+•	
+•	
 •	Experience integrating with RESTful web services;
 •	Experience with efficiency software like ReSharper;
 •	Experience with ASP, C++, ASP.NET WebForms and ActionScript/Flash development;
