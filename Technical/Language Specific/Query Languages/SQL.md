@@ -1,1 +1,0 @@
-Experience with SQL Server 2008/2012/2014;

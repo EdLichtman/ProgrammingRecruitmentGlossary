@@ -1,10 +1,8 @@
 Preferred, but not required, skills include:
-•	
-•	
-•	Experience integrating with RESTful web services;
+
 •	Experience with efficiency software like ReSharper;
-•	Experience with ASP, C++, ASP.NET WebForms and ActionScript/Flash development;
-•	Experience with Agile project management software such as JIRA or TFS;
+
+Experience with front-end technologies Such as SVG
 •	Experience with Continuous integration (e.g. CruiseControl.NET, TFS, TeamCity);
 •	Experience incrementally delivering software, using Scrum or other agile methodologies;
 •	Knowledge and experience with Design Patterns;
@@ -59,3 +57,20 @@ We continually search for candidates who share our beliefs and values. Common tr
 •	Quick learner. Must know when to listen and when to take charge.
 •	Obsessive about quality and customer satisfaction.
 •	Beyond the usual benefits, we offer a competitive compensation package.  Please contact us to learn more.
+
+
+
+To be successful in this role, you will need the following knowledge, skills and abilities:
+
+Bachelor’s Degree in Computer Science, Information Technology or related discipline OR applicable experience;
+
+
+Experience with C++ and ActionScript/Flash development;
+
+Experience with modern version control systems (Mercurial, Git, Subversion, etc.);
+
+Experience with OR/M frameworks (Entity Framework, nHibernate, Hibernate, etc.); 
+
+Is a proven team player in a cross-functional environment and possesses the ability to maintain focus on established business goals.
+
+Experience with Domain-Driven Design (DDD) and Test Driven Development (TDD);
