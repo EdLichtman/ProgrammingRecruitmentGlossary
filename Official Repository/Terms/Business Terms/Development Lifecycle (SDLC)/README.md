@@ -1,1 +1,4 @@
 Participate in every aspect of the development lifecycle including sales engineering, requirements gathering, solution architecture, development, testing, and deployment.
+
+
+The main duties of the Software Developer position will include contribution towards software development projects within the software team.  This individual will see software projects from requirements generation through release while making sure that design, execution, documentation, testing and verification are successful and timely.  As part of a small software team, this individual will collaborate with other software developers and engineering disciplines to advance technology. 
