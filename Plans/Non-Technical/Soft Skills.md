@@ -31,3 +31,5 @@ Engage fellow team members in building and maintaining a collegial, respectful a
 •	Effectively communicate with team members, clients, and partners.
 
 •	A self-starter with excellent written and verbal communication skills with an aptitude for learning new technologies.
+
+•	The ideal candidate possesses a combination of strong development background, excellent analytical skills, good customer-facing skills and a solid understanding of business systems.

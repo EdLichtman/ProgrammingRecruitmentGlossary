@@ -1,2 +1,2 @@
 #!/bin/bash
-find ~/ProgrammingRecruitmentGlossary/ -type d -exec touch {}/"README.md" \;
+find ~/ProgrammingRecruitmentGlossary/Official\ Repository -type d -exec touch {}/"README.md" \;

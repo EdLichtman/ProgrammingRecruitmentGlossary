@@ -24,8 +24,7 @@ Key Responsibilities Include:
 
 
 Ideal Candidate Qualifications:
-•	The ideal candidate possesses a combination of strong development background, excellent analytical skills, good customer-facing skills and a solid understanding of business systems.
-•	Experience in database design and development is a plus.
+
 •	Knowledge of transactional business processing in CRM, ERP and Accounting applications like: SalesForce.com, NetSuite, QuickBooks, Dynamics GP (Great Plains), Navision, ACT, Goldmine, MAS Family, Sage Family, Siebel, Oracle, SAP, PeopleSoft, JD Edwards, etc.
 
 •	Excellent analytical and problem solving skills.
