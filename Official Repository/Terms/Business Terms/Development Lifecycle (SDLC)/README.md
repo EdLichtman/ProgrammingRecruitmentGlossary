@@ -1,0 +1,1 @@
+Participate in every aspect of the development lifecycle including sales engineering, requirements gathering, solution architecture, development, testing, and deployment.
