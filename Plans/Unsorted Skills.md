@@ -25,10 +25,9 @@ Key Responsibilities Include:
 
 Ideal Candidate Qualifications:
 •	The ideal candidate possesses a combination of strong development background, excellent analytical skills, good customer-facing skills and a solid understanding of business systems.
-•	Experience with JavaScript, HTML and CSS.
 •	Experience in database design and development is a plus.
 •	Knowledge of transactional business processing in CRM, ERP and Accounting applications like: SalesForce.com, NetSuite, QuickBooks, Dynamics GP (Great Plains), Navision, ACT, Goldmine, MAS Family, Sage Family, Siebel, Oracle, SAP, PeopleSoft, JD Edwards, etc.
-•	A self-starter with excellent written and verbal communication skills with an aptitude for learning new technologies.
+
 •	Excellent analytical and problem solving skills.
 •	Ability to handle a variety of different projects simultaneously and capable of managing multiple deadlines.  Ability to take direction and work independently.
 We continually search for candidates who share our beliefs and values. Common traits that we admire include:
@@ -48,9 +47,6 @@ Bachelor’s Degree in Computer Science, Information Technology or related disci
 
 Experience with C++ and ActionScript/Flash development;
 
-Experience with modern version control systems (Mercurial, Git, Subversion, etc.);
-
-Experience with OR/M frameworks (Entity Framework, nHibernate, Hibernate, etc.); 
 
 Is a proven team player in a cross-functional environment and possesses the ability to maintain focus on established business goals.
 

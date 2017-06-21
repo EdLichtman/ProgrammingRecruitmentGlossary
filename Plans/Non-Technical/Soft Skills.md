@@ -29,3 +29,5 @@ Engage fellow team members in building and maintaining a collegial, respectful a
 -	A minimum of 5 years’ working in the field
 
 •	Effectively communicate with team members, clients, and partners.
+
+•	A self-starter with excellent written and verbal communication skills with an aptitude for learning new technologies.
