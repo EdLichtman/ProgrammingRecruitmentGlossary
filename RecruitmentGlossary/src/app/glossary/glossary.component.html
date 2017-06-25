@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Welcome to the Recruitment Glossary!</h1>
+  </div>
+  <div class="row">
+    <div class="col-12" *ngFor="let term of terms | async; let i = index">
+      <div class="col-sm-4"><a [routerLink]="['.','terms',term.termId]">{{term.termName}}</a></div>
+      <div class="col-sm-8">
+        <div class="col-sm-12" *ngFor="let path of term.parents; let j = index">
+          {{ termRepo.getTermById(path.parentId)?.termName}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
