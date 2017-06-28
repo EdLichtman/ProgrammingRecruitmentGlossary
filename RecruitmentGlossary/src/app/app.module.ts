@@ -1,31 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { TermComponent } from './term/term.component';
-import { AppRouter } from "./app.routes";
-import { GlossaryComponent } from './glossary/glossary.component';
-import { DatabaseService } from "./dataStorage/database.service";
+import { FormsModule } from '@angular/forms';
+import { AppRouter } from "app/app.routes";
+import { AngularFireModule } from "angularfire2/angularfire2";
+import { config } from "app/app.config";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AppComponent } from "app/app.component";
+import { TermComponent } from "app/term/term.component";
+import { GlossaryComponent } from "app/glossary/glossary.component";
 import { TermRepository } from "app/dataStorage/termRepository.service";
-import { AngularFireDatabase } from "angularfire2/database";
-import { FirebaseApp } from "angularfire2/angularfire2";
+import { AddTermComponent } from './add-term/add-term.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    AppRouter
+    FormsModule,
+    AppRouter,
+    AngularFireModule.initializeApp(config.firebase),
+    AngularFireDatabaseModule
   ],
   declarations: [
     AppComponent,
     TermComponent,
-    GlossaryComponent
+    GlossaryComponent,
+    AddTermComponent
   ],
-  providers: [DatabaseService,
-              TermRepository,
-              AngularFireDatabase,
-              FirebaseApp],
+  providers: [TermRepository],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

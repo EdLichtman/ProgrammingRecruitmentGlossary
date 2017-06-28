@@ -23,7 +23,7 @@ export class GlossaryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.terms = this.termRepo.terms;
+    this.terms = this.termRepo.getTerms();
     
   }
 

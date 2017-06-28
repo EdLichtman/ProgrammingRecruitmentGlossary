@@ -1,0 +1,26 @@
+<div class="container">
+<h1>Add a term below</h1>
+
+<div class="form-group">
+  <label for="TermName">Term: </label>
+  <input type="text" class="form-control" id="TermName"
+    [(ngModel)]="newTerm.termName">
+</div>
+<div class="form-group">
+  <label for="TermDescription">Description: </label>
+  <input type="text" class="form-control" id="TermDescription" 
+    [(ngModel)]="newTerm.termDescription">
+</div>
+<div class="form-group">
+  <label>Parents: </label>
+  <div class="checkbox" *ngFor="let term of existingTerms; let i = index">
+    <label for="Term{{term.termName}}">
+    <input type="checkbox" value="{{term.termId}}" id="Term{{term.termName}}" 
+      (change)="addOrRemoveParent(i)">&nbsp;{{term.termName}}
+    </label>
+  </div>
+</div>
+
+<div>My New Term is:</div>
+<div>Name = {{newTerm.termName}}, Description = {{newTerm.termDescription}}, ParentIds: {{newTerm.parents | json}}</div>
+</div>

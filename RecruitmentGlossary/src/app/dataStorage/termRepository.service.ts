@@ -1,62 +1,92 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
-import { DatabaseService } from "./database.service";
 import { Term } from "app/dataStorage/term";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
+import 'rxjs/add/operator/filter';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Subscriber } from "rxjs/Subscriber";
 
 @Injectable()
-export class TermRepository extends DatabaseService {
-    public terms: Term[] = new Array<Term>();
-    public termsSubject: Subject<Term[]>;
+export class TermRepository {
+    public terms: FirebaseListObservable<Term[]>;
+    private dbLocation: string = 'terms';
+    public termsList: Term[];
 
-    constructor(private tRouter: Router) {
-        super(tRouter);
-        this.termsSubject = new Subject<Term[]>();
+
+    constructor(
+        private af: AngularFireDatabase
+    ) {
         this.initializeTerms();
     }
 
     private initializeTerms() {
-        let dbRef = firebase.database().ref('terms/');
-        
-        dbRef.once('value')
-            .then((snapshot) => {
-                let tmp: string[] = snapshot.val();
-                let terms = Object.keys(tmp).map(key => tmp[key])
-                this.termsSubject.next(terms);
-                console.log(this.terms)
+        this.terms = this.af.list(this.dbLocation)
+        // this.terms.forEach(terms => {
+        //     terms.forEach(term => {
+        //         term.parentTerms = new Subscriber<Object[]>();
+        //         term.parentTerms.next(terms.filter(parent => {
+        //             return term.parents && parent.termId == term.parents[0]["parentId"];
+        //         }))
+        //     })
+        // })
+        // var myObservable = new Subject();
+        // myObservable.subscribe(value => console.log(value));
+        // myObservable.next('foo');
+
+        this.terms.subscribe(termsList => {
+            termsList.forEach(term => {
+                if (term.parents) {
+                    term.parentTerms = new Subject<Term[]>().asObservable();
+                    let parentsMap = term.parents.map(parent => {
+                        return termsList.filter(parentTerm => {
+                            return parent["termId"] == parentTerm.termId
+                        })
+                    })
+                    term.parentTerms.subscribe(value => parentsMap);
+                }
             })
-        this.termsSubject.subscribe(
-            terms => this.terms = terms
-        );
+            this.termsList = termsList;
+        })
+
+
+           /* .subscribe(terms => terms.forEach((term) => {
+                term.parentTerms = new Subscriber<Object[]>();
+                let parentTerms = new Array();
+                term.parents && term.parents.forEach(element => {
+                    let parent = new Term;
+                    parentTerms.push(parent)
+                    this.getTermById(parent, term.termId)
+                    term.parentTerms.next(parentTerms)
+                });
+            }))*/
     }
-
-
 
     getTerms() {
-        return this.termsSubject.asObservable();
+        return this.terms;
     }
 
-    getTermById(termId: number): any {
-        return this.terms.filter(function(term) { return term.termId === termId})[0]
-
+    getTermById(term: Term, termId: number){
+        let terms = this.af.list(this.dbLocation, 
+        {
+            query: {
+                orderByChild: "termId",
+                equalTo: termId
+            }
+        });
+        terms.subscribe(thisTerm => {
+            term = (thisTerm);
+        });
     }
 
-    getChildrenByTermName(termName: string) {
-
+    postTerm(term: Term) {
+        let database = firebase.database().ref(this.dbLocation)
+        database.push(term).once("child_added", function(snapshot) {
+            alert(snapshot.val() + " added");
+        });
     }
 
-    getChildrenById(termId: number) {
-
-    }
-
-    getParentsByTermName(termName: string) {
-
-    }
-
-    getParentsByTermId(termId: number) {
-
-    }
+    
 
 }
